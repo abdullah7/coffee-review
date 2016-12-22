@@ -2,6 +2,7 @@
 
 module.exports = function(CoffeeShop) {
 
+    // Remote method to handle '/status'
     CoffeeShop.status = function (cb) {
         var currentDate = new Date();
         var currentHour = currentDate.getHours();
@@ -33,7 +34,7 @@ module.exports = function(CoffeeShop) {
         }
     );
 
-    // getName
+    // Remote method to handle '/getname'
     CoffeeShop.getName = function (shopId, cb) {
         CoffeeShop.findById( shopId, function (err, instance) {
             cb(null, instance.name);
