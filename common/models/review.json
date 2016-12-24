@@ -1,8 +1,8 @@
 {
   "name": "Review",
-  "plural": "Y",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
@@ -40,17 +40,17 @@
       "permission": "DENY"
     },
     {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW"
-    },
-    {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "create"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
     },
     {
       "accessType": "WRITE",
